@@ -4,7 +4,9 @@ import tw from 'tailwind-styled-components'
 import './styles/theme.css'
 import React from "react";
 import StyledComponent from "./StyledComponent";
+import {setTitle} from "./decorators/@setTitle";
 
+@setTitle(() => 'application main mage')
 class App extends React.Component {
 
     //const [theme, setTheme] = useState(“dark”)

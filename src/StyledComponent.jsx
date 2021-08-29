@@ -1,7 +1,9 @@
 import logo from './logo.svg';
 import tw from 'tailwind-styled-components'
 import React from "react";
+import {setTitle} from "./decorators/@setTitle";
 
+@setTitle(() => 'styledComponent mage')
 class StyledComponent extends React.Component {
 
     render () {
