@@ -39,9 +39,11 @@
     ]
   },
   "devDependencies": {
-    "tailwindcss": "^1.8.10",
-    "postcss-cli": "^7.1.0",
     "autoprefixer": "^9.7.5",
-    "postcss":"postcss@^7"
+    "postcss": "postcss@^7",
+    "postcss-cli": "^7.1.0",
+    "styled-components": "^5.3.1",
+    "tailwind-styled-components": "^2.0.3",
+    "tailwindcss": "^1.8.10"
   }
 }
