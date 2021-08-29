@@ -8,5 +8,11 @@ module.exports = {
             ], // Additional plugins given in an array are appended to existing config.
 
         }
+    },
+    babel: {
+        plugins: [
+            [ "@babel/plugin-proposal-decorators", { "legacy": true } ],
+            ["@babel/plugin-proposal-class-properties", { "loose": true }]
+        ],
     }
 }
