@@ -3,7 +3,10 @@ import tw from 'tailwind-styled-components'
 import React from "react";
 import {setTitle} from "./decorators/@setTitle";
 
-@setTitle(() => 'styledComponent mage')
+@setTitle((props) => {
+    if(!props.user) return 'Loading profile...'
+    return `${props.user.name}'s Profile`
+})
 class StyledComponent extends React.Component {
 
     render () {

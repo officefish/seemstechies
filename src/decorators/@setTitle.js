@@ -12,7 +12,9 @@ let mapStateToProps = (state) =>
 {
     return {
         /** Page title */
-        title: state.document.title
+        title: state.document.title,
+        /** Authorized user */
+        user: state.profile.user
     }
 }
 
