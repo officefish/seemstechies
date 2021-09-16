@@ -1,17 +1,34 @@
 import './styles/tailwind.css';
-import './styles/theme.css'
 import React from "react";
-// import StyledComponent from "./StyledComponent";
 import Button from "./components/button/Button";
+import {DivFlxFllScrn} from "./components/styled/display/display";
 
-class App extends React.Component {
+import { useEffect } from "react";
+import { applyTheme } from "./themes/utils";
+import baseTheme from "./themes/base";
+import darkTheme from "./themes/dark";
 
-    render () {
-        return (
-            <div className="flex items-center justify-center w-full h-screen">
-                <Button>Themed Button</Button>
-            </div>
-        );
+const App = () => {
+
+    useEffect(() => {
+        applyTheme(baseTheme);
+    }, []);
+
+    const baseClickHandle = () => {
+        applyTheme(baseTheme)
     }
+
+    const darkClickHandle = () => {
+        applyTheme(darkTheme)
+    }
+
+    return <DivFlxFllScrn>
+        <Button onClick={ baseClickHandle } >Base theme</Button>
+        <Button onClick={ darkClickHandle } color="secondary">
+            Dark theme
+        </Button>
+    </DivFlxFllScrn>
 }
 export default App;
+
+
