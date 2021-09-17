@@ -1,6 +1,6 @@
 import './styles/tailwind.css';
 import React from "react";
-import Button from "./components/button/Button";
+import Button from "./ui/button/Button";
 import {DivFlxFllScrn} from "./components/styled/display/display";
 
 import { useEffect } from "react";
@@ -23,10 +23,8 @@ const App = () => {
     }
 
     return <DivFlxFllScrn>
-        <Button onClick={ baseClickHandle } >Base theme</Button>
-        <Button onClick={ darkClickHandle } color="secondary">
-            Dark theme
-        </Button>
+        <Button onClick={ baseClickHandle } label={'Base theme'} />
+        <Button onClick={ darkClickHandle } label={'Dark theme'} primary={false} />
     </DivFlxFllScrn>
 }
 export default App;
